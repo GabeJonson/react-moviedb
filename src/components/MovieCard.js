@@ -17,7 +17,7 @@ class MovieCard extends Component {
   }
 
   componentDidMount() {
-    axios.get(URL.replace('{-}', window.location.pathname))
+    axios.get(URL.replace('{-}', this.props.match.url))
       .then(res => {
         let response = JSON.parse(res.request.responseText);
 
@@ -49,7 +49,6 @@ class MovieCard extends Component {
                 {element.production_companies.map(item => <span key={item.id}>{item.name}</span>)}
               </div>
             </div>
-            {console.log(element)}
           </Col>
         </Row>
       </Container>

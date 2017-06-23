@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-// import MovieCard from './components/MovieCard';
+import MovieCard from './components/MovieCard';
 import {
   BrowserRouter as Router,
   Route,
@@ -16,11 +16,11 @@ ReactDOM.render(
   <Router>
     <div>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li className='home-link'><Link to="/">Home</Link></li>
       </ul>
 
       <Route exact path="/" component={App}/>
-      {/* <Route exact path="/:id" component={MovieCard}/> */}
+      <Route path="/:id" component={MovieCard}/>
     </div>
   </Router>,
   document.getElementById('root')

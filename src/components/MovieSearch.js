@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
 
+import MovieCards from './MovieCards';
+
 import axios from 'axios';
 
 const getFilms = {};
@@ -31,9 +33,6 @@ class MovieSearch extends Component {
     if(form.elements.year.value !== '')
       getFilms.year = form.elements.year.value
 
-    if(form.elements.genre.value !== '')
-      getFilms.genre = form.elements.genre.value;
-
     axios({
       method: 'GET',
       url: URL,
@@ -52,6 +51,32 @@ class MovieSearch extends Component {
   }
 
   render() {
+    if(this.state.searchFilm) {
+      return (
+        <div>
+          <Form inline onSubmit={this.searchFilm.bind(this)}>
+            <FormGroup>
+              <Input
+                type="text"
+                name="query"
+                id="query"
+                placeholder="Search by name"
+              />
+              <Input
+                type="text"
+                name="year"
+                id="year"
+                placeholder="Search by year"
+              />
+              <Button color="info">Search</Button>
+            </FormGroup>
+          </Form>
+          <MovieCards items={this.state.searchFilm} />
+          <hr/>
+        </div>
+      )
+    }
+
     return(
       <Form inline onSubmit={this.searchFilm.bind(this)}>
         <FormGroup>

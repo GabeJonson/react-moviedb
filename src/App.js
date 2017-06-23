@@ -3,6 +3,7 @@ import { Container } from 'reactstrap';
 
 import MovieCards from "./components/MovieCards";
 import MoviePagination from "./components/MoviePagination";
+import MovieSearch from "./components/MovieSearch";
 
 import axios from 'axios';
 
@@ -46,6 +47,7 @@ class App extends Component {
     return (
       <Container>
         <h1>Movie DB</h1>
+        <MovieSearch />
         <MovieCards items={this.state.movies.results} />
         <MoviePagination
           click={this.paginationLink.bind(this)}

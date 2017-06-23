@@ -11,9 +11,13 @@ class MovieCards extends Component {
     return (
       <Row>
         {this.props.items.map((item, key) =>
-          <Col xs='1' md='6' lg='4' className='content-container' key={key}>
+          <Col xs='12' md='6' lg='4' className='content-container' key={key}>
             <Link to={`/${item.id}`}>
-              <Image src={`${IMAGE}${item.backdrop_path}`} alt=""/>
+              <Image src={`
+                ${item.poster_path ?
+                  IMAGE + item.poster_path :
+                  'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/600px-No_image_available.svg.png'}
+                  `} alt=""/>
               <h3 className="title">{item.title}</h3>
               <p className="overview">{sliceText(item.overview)}</p>
             </Link>

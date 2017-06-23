@@ -59,3 +59,21 @@ input { margin: 0 8px; }
   color: #f33;
   background-color: rgba(0,0,0,0.1);
 }
+
+hr { border-top: 1px solid #333; }
+
+.home-link { list-style: none; }
+
+.home-link a {
+  margin-top: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: #333;
+  display: block;
+  transition: all 0.3s;
+}
+
+.home-link a:hover {
+  text-decoration: none;
+  color: #ddd;
+}
