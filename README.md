@@ -1,1 +1,1 @@
-## To see the app click on home (top right corner)
+## To see the app click at home
