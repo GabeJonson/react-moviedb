@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+form.form-inline input:focus, form.form-inline button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+button { cursor: pointer; }
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content-container a {
+  color: #333;
+  transition: all 0.3s;
+}
+
+.content-container a:hover {
+  color: #f33;
+  text-decoration: none;
+}
+
+.content-container h3 { height: 60px; }
+
+.container h1 { margin: 1.4rem 0; }
+
+form {
+  width: calc(100% + 15px);
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.container form .form-group {
+  margin-bottom: 1.4rem;
+  justify-content: space-between;
+}
+
+input { margin: 0 8px; }
+
+.pagination {
+  margin: 2.8rem 0;
+  justify-content: center;
+}
+
+.pagination .page-link {
+  color: #333;
+  transition: all 0.3s;
+}
+
+.pagination .page-link:hover {
+  color: #f33;
+  background-color: rgba(0,0,0,0.1);
+}

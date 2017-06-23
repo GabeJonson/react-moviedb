@@ -1,0 +1,25 @@
+{
+  "name": "movieDB",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bootstrap": "4.0.0-alpha.6",
+    "react": "^15.5.4",
+    "react-addons-css-transition-group": "^15.6.0",
+    "react-addons-transition-group": "^15.6.0",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "reactstrap": "^4.6.2",
+    "styled-components": "^2.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
